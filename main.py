@@ -19,7 +19,11 @@ def removeTask():
 
 # create getAllTasks function to view all the tasks
 def getAllTasks():
-    print(tasks)
+    if not tasks:
+        print("There are no tasks currently.")
+    # to indexing tasks using built-in enumarate function
+    enumerateTasks = enumerate(tasks)
+    print(list(enumerateTasks))
     # print("not applicable :( ")
 
 
