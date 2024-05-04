@@ -13,8 +13,19 @@ def addTask():
 
 
 # create removeTask function to delete an existing task
+# def removeTask():
+#     print("not applicable :( ")
 def removeTask():
-    print("not applicable :( ")
+    getAllTasks()
+    try:
+        removeTask = int(input("Enter the tasks index to remove: "))
+        if removeTask >= 0 and removeTask < len(tasks):
+            tasks.pop(removeTask)
+            print(f"Task {removeTask} has been removed.")
+        else:
+            print(f"Task #{removeTask} was not found.")
+    except:
+        print("Invalid input.")
 
 
 # create getAllTasks function to view all the tasks
@@ -24,7 +35,6 @@ def getAllTasks():
     # to indexing tasks using built-in enumarate function
     enumerateTasks = enumerate(tasks)
     print(list(enumerateTasks))
-    # print("not applicable :( ")
 
 
 while True:
