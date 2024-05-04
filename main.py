@@ -1,7 +1,7 @@
 # ----Project of ToDo List----
 print("Application is running......")
 
-# add a variable
+# add a variable to store al task
 tasks = []
 
 
@@ -13,19 +13,19 @@ def addTask():
 
 
 # create removeTask function to delete an existing task
-# def removeTask():
-#     print("not applicable :( ")
 def removeTask():
+    # call getAllTasks to view tasks
     getAllTasks()
+
     try:
-        removeTask = int(input("Enter the tasks index to remove: "))
+        removeTask = int(input("Enter the task index to remove: "))
         if removeTask >= 0 and removeTask < len(tasks):
             tasks.pop(removeTask)
-            print(f"Task {removeTask} has been removed.")
+            print(f"The task {removeTask} has been removed.")
         else:
-            print(f"Task #{removeTask} was not found.")
+            print(f"The task #{removeTask} was not found.")
     except:
-        print("Invalid input.")
+        print("Invalid input. Please try with valid input")
 
 
 # create getAllTasks function to view all the tasks
